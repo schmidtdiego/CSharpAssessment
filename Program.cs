@@ -111,7 +111,7 @@ new Event{ Name = "LadyGaGa", City = "Washington"}
             int distance;
             if (!CityDistances.TryGetValue((fromCity, toCity), out distance))
             {
-                bool retry = maxTriesApi > 1;
+                bool retry = true;
                 for (int i = 1; retry && i <= maxTriesApi; i++)
                 {
                     try
